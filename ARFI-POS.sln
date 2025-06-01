@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35728.132
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARFI-POS", "ARFI-POS\ARFI-POS.csproj", "{1BC15700-1235-432E-A1FA-07D40555A68F}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ArfiPlus", "ArfiPlus\ArfiPlus.vdproj", "{BCAF30BD-D3AC-4995-913E-FBF363585DBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BC15700-1235-432E-A1FA-07D40555A68F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BC15700-1235-432E-A1FA-07D40555A68F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BC15700-1235-432E-A1FA-07D40555A68F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BC15700-1235-432E-A1FA-07D40555A68F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCAF30BD-D3AC-4995-913E-FBF363585DBC}.Debug|Any CPU.ActiveCfg = Debug
+		{BCAF30BD-D3AC-4995-913E-FBF363585DBC}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

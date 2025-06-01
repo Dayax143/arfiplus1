@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.25, 12" name="arfiplusDB">
+  <DataContextMoniker Name="/arfiplusDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="b78837de-292a-4fb4-aa9c-d579fe464139" absoluteBounds="9.25, 5.125, 2, 4.0785139973958309">
+      <DataClassMoniker Name="/arfiplusDBDataContext/tblPayment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="998eac78-ed8b-4973-ac63-568cfaa0fdca" absoluteBounds="9.265, 5.585, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="52b6d545-3da4-4073-bd13-bdce2700f1f4" absoluteBounds="9.25, 0.75, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/arfiplusDBDataContext/tblProduct" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b541c31-ae0b-4ea2-9c06-84424a0d9e5f" absoluteBounds="9.265, 1.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c47342e7-a4e9-43a7-b79d-06c18443a1f7" absoluteBounds="3.5, 6.125, 2, 2.1554996744791657">
+      <DataClassMoniker Name="/arfiplusDBDataContext/tblInvoice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6e5d4f0a-c243-42c6-bf7d-c0a039aca769" absoluteBounds="3.515, 6.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0551fe3b-90f1-4e80-8789-b6828682f9b4" absoluteBounds="3.75, 1.375, 2, 1.9631982421875">
+      <DataClassMoniker Name="/arfiplusDBDataContext/tblSupplier" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f9c0d4fe-411f-45c7-b345-af237d24ed76" absoluteBounds="3.765, 1.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bce7f665-f1e5-4403-999b-4ca2213103e0" absoluteBounds="12, 5.5, 2, 3.5016097005208309">
+      <DataClassMoniker Name="/arfiplusDBDataContext/tblSale" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c29c2c02-d49c-44b8-a0a1-8438758a85a3" absoluteBounds="12.015, 5.96, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8f54f876-0597-4c89-aaab-b8b359601831" absoluteBounds="0.75, 9.375, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/arfiplusDBDataContext/tblUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="585da93e-b51b-447d-af05-c35613b4a351" absoluteBounds="0.765, 9.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cb24df66-bcbc-4ff6-ab2f-78dd4c5773af" absoluteBounds="0.75, 3, 2, 2.347801106770834">
+      <DataClassMoniker Name="/arfiplusDBDataContext/tblEmployee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="94bdd4dd-6ab2-42e3-b661-9569c7a27ffd" absoluteBounds="0.765, 3.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 7.970400390625); (9.25 : 7.970400390625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/arfiplusDBDataContext/tblInvoice/tblInvoice_tblPayment" />
+      <nodes>
+        <classShapeMoniker Id="c47342e7-a4e9-43a7-b79d-06c18443a1f7" />
+        <classShapeMoniker Id="b78837de-292a-4fb4-aa9c-d579fe464139" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 8.28049967447917); (4.5 : 9.45351399739583); (11.625 : 9.45351399739583); (11.625 : 7.25080485026042); (12 : 7.25080485026042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/arfiplusDBDataContext/tblInvoice/tblInvoice_tblSale" />
+      <nodes>
+        <classShapeMoniker Id="c47342e7-a4e9-43a7-b79d-06c18443a1f7" />
+        <classShapeMoniker Id="bce7f665-f1e5-4403-999b-4ca2213103e0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 7.25080485026042); (12 : 7.25080485026042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/arfiplusDBDataContext/tblPayment/tblPayment_tblSale" />
+      <nodes>
+        <classShapeMoniker Id="b78837de-292a-4fb4-aa9c-d579fe464139" />
+        <classShapeMoniker Id="bce7f665-f1e5-4403-999b-4ca2213103e0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 2.21235270182292); (13 : 2.21235270182292); (13 : 5.5)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/arfiplusDBDataContext/tblProduct/tblProduct_tblSale" />
+      <nodes>
+        <classShapeMoniker Id="52b6d545-3da4-4073-bd13-bdce2700f1f4" />
+        <classShapeMoniker Id="bce7f665-f1e5-4403-999b-4ca2213103e0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.37424967447917); (3.59375 : 4.37424967447917); (3.59375 : 6.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/arfiplusDBDataContext/tblEmployee/tblEmployee_tblInvoice" />
+      <nodes>
+        <classShapeMoniker Id="cb24df66-bcbc-4ff6-ab2f-78dd4c5773af" />
+        <classShapeMoniker Id="c47342e7-a4e9-43a7-b79d-06c18443a1f7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7100ff06-e700-42e7-b142-2da7bd0acb00" absoluteBounds="6.875, 1.75, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/arfiplusDBDataContext/tblLoan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab38b1ca-f426-4625-b095-af89812a98d2" absoluteBounds="6.89, 2.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.6250025 : 6.125); (3.6250025 : 3.88747395833333); (6.875 : 3.88747395833333)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/arfiplusDBDataContext/tblInvoice/tblInvoice_tblLoan" />
+      <nodes>
+        <classShapeMoniker Id="c47342e7-a4e9-43a7-b79d-06c18443a1f7" />
+        <classShapeMoniker Id="7100ff06-e700-42e7-b142-2da7bd0acb00" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.25 : 2.71235270182292); (8.875 : 2.71235270182292)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/arfiplusDBDataContext/tblProduct/tblProduct_tblLoan" />
+      <nodes>
+        <classShapeMoniker Id="52b6d545-3da4-4073-bd13-bdce2700f1f4" />
+        <classShapeMoniker Id="7100ff06-e700-42e7-b142-2da7bd0acb00" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="66197faf-f1c7-4b67-ba97-0067466426d0" absoluteBounds="5.75, 5.25, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/arfiplusDBDataContext/tblCustomer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="37dd3e35-a476-41a4-8a5a-5bfe6444544e" absoluteBounds="5.765, 5.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.75 : 6.42390055338542); (8.91666666666667 : 6.42390055338542 : JumpStart); (9.08333333333333 : 6.42390055338542 : JumpEnd); (9.25 : 6.42390055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/arfiplusDBDataContext/tblCustomer/tblCustomer_tblPayment" />
+      <nodes>
+        <classShapeMoniker Id="66197faf-f1c7-4b67-ba97-0067466426d0" />
+        <classShapeMoniker Id="b78837de-292a-4fb4-aa9c-d579fe464139" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 6.86140055338542); (5.5 : 6.86140055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/arfiplusDBDataContext/tblCustomer/tblCustomer_tblInvoice" />
+      <nodes>
+        <classShapeMoniker Id="66197faf-f1c7-4b67-ba97-0067466426d0" />
+        <classShapeMoniker Id="c47342e7-a4e9-43a7-b79d-06c18443a1f7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.75 : 7.04210283007813); (9 : 7.04210283007813); (9 : 4.875); (13 : 4.875); (13 : 5.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/arfiplusDBDataContext/tblCustomer/tblCustomer_tblSale" />
+      <nodes>
+        <classShapeMoniker Id="66197faf-f1c7-4b67-ba97-0067466426d0" />
+        <classShapeMoniker Id="bce7f665-f1e5-4403-999b-4ca2213103e0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.3125 : 5.25); (7.3125 : 4.67470540364583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/arfiplusDBDataContext/tblCustomer/tblCustomer_tblLoan" />
+      <nodes>
+        <classShapeMoniker Id="66197faf-f1c7-4b67-ba97-0067466426d0" />
+        <classShapeMoniker Id="7100ff06-e700-42e7-b142-2da7bd0acb00" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

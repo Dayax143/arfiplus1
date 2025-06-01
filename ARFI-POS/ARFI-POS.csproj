@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1BC15700-1235-432E-A1FA-07D40555A68F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ARFI_POS</RootNamespace>
+    <AssemblyName>ARFI-POS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="arfiplusDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>arfiplusDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReturnSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReturnSale.Designer.cs">
+      <DependentUpon>frmReturnSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSales.Designer.cs">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSupplier.Designer.cs">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sharedClass.cs" />
+    <Compile Include="uCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uCustomer.Designer.cs">
+      <DependentUpon>uCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uLoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uLoan.Designer.cs">
+      <DependentUpon>uLoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uProducts.Designer.cs">
+      <DependentUpon>uProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uReport.Designer.cs">
+      <DependentUpon>uReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uSales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uSales.Designer.cs">
+      <DependentUpon>uSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uUsers.Designer.cs">
+      <DependentUpon>uUsers.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReturnSale.resx">
+      <DependentUpon>frmReturnSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSales.resx">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupplier.resx">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="uCustomer.resx">
+      <DependentUpon>uCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uLoan.resx">
+      <DependentUpon>uLoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uProducts.resx">
+      <DependentUpon>uProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uReport.resx">
+      <DependentUpon>uReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uSales.resx">
+      <DependentUpon>uSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uUsers.resx">
+      <DependentUpon>uUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="arfiplusDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>arfiplusDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="arfiplusDB.dbml.layout">
+      <DependentUpon>arfiplusDB.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

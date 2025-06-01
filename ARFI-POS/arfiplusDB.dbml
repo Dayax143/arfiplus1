@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ArfiPlusPerfurmes" Class="arfiplusDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=172.16.168.212;Initial Catalog=ArfiPlusPerfurmes;Persist Security Info=True;User ID=sa;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="ARFI_POS.Properties.Settings" SettingsPropertyName="ArfiPlusPerfurmesConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblPayment" Member="tblPayments">
+    <Type Name="tblPayment">
+      <Column Name="payment_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="customer_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="paymentStatus" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="netPaid" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="discount" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="netProfit" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="invoice_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="currency" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="onhand" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="zaad" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="edahab" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="soltelco" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="bank" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="other" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="returned" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="note" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="tblPayment_tblSale" Member="tblSales" ThisKey="payment_id" OtherKey="payment_id" Type="tblSale" />
+      <Association Name="tblInvoice_tblPayment" Member="tblInvoice" ThisKey="invoice_id" OtherKey="invoice_id" Type="tblInvoice" IsForeignKey="true" />
+      <Association Name="tblCustomer_tblPayment" Member="tblCustomer" ThisKey="customer_id" OtherKey="customer_id" Type="tblCustomer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblProduct" Member="tblProducts">
+    <Type Name="tblProduct">
+      <Column Name="product_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="product_name" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="product_type" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="barcode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cost" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="price" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="supplier_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="last_update" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="tblProduct_tblSale" Member="tblSales" ThisKey="product_id" OtherKey="product_id" Type="tblSale" />
+      <Association Name="tblProduct_tblLoan" Member="tblLoans" ThisKey="product_id" OtherKey="product_id" Type="tblLoan" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblInvoice" Member="tblInvoices">
+    <Type Name="tblInvoice">
+      <Column Name="invoice_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="customer_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="returned" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="transactionStatus" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="tblInvoice_tblPayment" Member="tblPayments" ThisKey="invoice_id" OtherKey="invoice_id" Type="tblPayment" />
+      <Association Name="tblInvoice_tblSale" Member="tblSales" ThisKey="invoice_id" OtherKey="invoice_id" Type="tblSale" />
+      <Association Name="tblInvoice_tblLoan" Member="tblLoans" ThisKey="invoice_id" OtherKey="invoice_id" Type="tblLoan" />
+      <Association Name="tblEmployee_tblInvoice" Member="tblEmployee" ThisKey="user_id" OtherKey="employee_id" Type="tblEmployee" IsForeignKey="true" />
+      <Association Name="tblCustomer_tblInvoice" Member="tblCustomer" ThisKey="customer_id" OtherKey="customer_id" Type="tblCustomer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSupplier" Member="tblSuppliers">
+    <Type Name="tblSupplier">
+      <Column Name="supplier_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="supplier_name" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="phone_number" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="detail" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSales" Member="tblSales">
+    <Type Name="tblSale">
+      <Column Name="sale_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="product_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="item_name" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="price" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="netPrice" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="payment_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="customer_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="unit_profit" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="returned" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="invoice_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="capturedAmount" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Association Name="tblInvoice_tblSale" Member="tblInvoice" ThisKey="invoice_id" OtherKey="invoice_id" Type="tblInvoice" IsForeignKey="true" />
+      <Association Name="tblPayment_tblSale" Member="tblPayment" ThisKey="payment_id" OtherKey="payment_id" Type="tblPayment" IsForeignKey="true" />
+      <Association Name="tblProduct_tblSale" Member="tblProduct" ThisKey="product_id" OtherKey="product_id" Type="tblProduct" IsForeignKey="true" />
+      <Association Name="tblCustomer_tblSale" Member="tblCustomer" ThisKey="customer_id" OtherKey="customer_id" Type="tblCustomer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblUser" Member="tblUsers">
+    <Type Name="tblUser">
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="passWord" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="usertype" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="recoveryQuestion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="recoveryAnswer" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="userStatus" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblEmployee" Member="tblEmployees">
+    <Type Name="tblEmployee">
+      <Column Name="employee_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="employee_name" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="employee_phone" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="employee_address" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="employee_shift" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="salary" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="employee_title" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Association Name="tblEmployee_tblInvoice" Member="tblInvoices" ThisKey="employee_id" OtherKey="user_id" Type="tblInvoice" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblLoan" Member="tblLoans">
+    <Type Name="tblLoan">
+      <Column Name="loan_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="customer_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="product_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="takenAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="paidAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="balance" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="paymentMethod" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="invoice_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="last_update" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="returned" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Association Name="tblInvoice_tblLoan" Member="tblInvoice" ThisKey="invoice_id" OtherKey="invoice_id" Type="tblInvoice" IsForeignKey="true" />
+      <Association Name="tblProduct_tblLoan" Member="tblProduct" ThisKey="product_id" OtherKey="product_id" Type="tblProduct" IsForeignKey="true" />
+      <Association Name="tblCustomer_tblLoan" Member="tblCustomer" ThisKey="customer_id" OtherKey="customer_id" Type="tblCustomer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCustomer" Member="tblCustomers">
+    <Type Name="tblCustomer">
+      <Column Name="customer_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="customer_name" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="customer_phone" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="customer_address" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="loanLimit" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cust_level" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="last_update" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="tblCustomer_tblPayment" Member="tblPayments" ThisKey="customer_id" OtherKey="customer_id" Type="tblPayment" />
+      <Association Name="tblCustomer_tblInvoice" Member="tblInvoices" ThisKey="customer_id" OtherKey="customer_id" Type="tblInvoice" />
+      <Association Name="tblCustomer_tblSale" Member="tblSales" ThisKey="customer_id" OtherKey="customer_id" Type="tblSale" />
+      <Association Name="tblCustomer_tblLoan" Member="tblLoans" ThisKey="customer_id" OtherKey="customer_id" Type="tblLoan" />
+    </Type>
+  </Table>
+</Database>

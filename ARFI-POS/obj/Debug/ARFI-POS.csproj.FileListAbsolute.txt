@@ -1,0 +1,44 @@
+F:\Software Development\HWA DEV\ARFI-POS\ARFI-POS\bin\Debug\ARFI-POS.exe.config
+F:\Software Development\HWA DEV\ARFI-POS\ARFI-POS\bin\Debug\ARFI-POS.exe
+F:\Software Development\HWA DEV\ARFI-POS\ARFI-POS\bin\Debug\ARFI-POS.pdb
+F:\Software Development\HWA DEV\ARFI-POS\ARFI-POS\obj\Debug\ARFI-POS.csproj.AssemblyReference.cache
+F:\Software Development\HWA DEV\ARFI-POS\ARFI-POS\obj\Debug\ARFI_POS.frmDashboard.resources
+F:\Software Development\HWA DEV\ARFI-POS\ARFI-POS\obj\Debug\ARFI_POS.frmLogin.resources
+F:\Software Development\HWA DEV\ARFI-POS\ARFI-POS\obj\Debug\POS_VUL.frmReturnSale.resources
+F:\Software Development\HWA DEV\ARFI-POS\ARFI-POS\obj\Debug\POS_VUL.frmSplash.resources
+F:\Software Development\HWA DEV\ARFI-POS\ARFI-POS\obj\Debug\ARFI_POS.Properties.Resources.resources
+F:\Software Development\HWA DEV\ARFI-POS\ARFI-POS\obj\Debug\ARFI_POS.uReport.resources
+F:\Software Development\HWA DEV\ARFI-POS\ARFI-POS\obj\Debug\ARFI-POS.csproj.GenerateResource.cache
+F:\Software Development\HWA DEV\ARFI-POS\ARFI-POS\obj\Debug\ARFI-POS.csproj.CoreCompileInputs.cache
+F:\Software Development\HWA DEV\ARFI-POS\ARFI-POS\obj\Debug\ARFI-POS.exe
+F:\Software Development\HWA DEV\ARFI-POS\ARFI-POS\obj\Debug\ARFI-POS.pdb
+F:\Software Development\HWA DEV\ARFI-POS\ARFI-POS\obj\Debug\ARFI_POS.frmCustomer.resources
+F:\Software Development\HWA DEV\ARFI-POS\ARFI-POS\obj\Debug\ARFI_POS.uSales.resources
+F:\Software Development\HWA DEV\ARFI-POS\ARFI-POS\obj\Debug\ARFI_POS.uCustomer.resources
+F:\Software Development\HWA DEV\ARFI-POS\ARFI-POS\obj\Debug\ARFI_POS.uLoan.resources
+F:\Software Development\HWA DEV\ARFI-POS\ARFI-POS\obj\Debug\ARFI_POS.frmSupplier.resources
+F:\Software Development\HWA DEV\ARFI-POS\ARFI-POS\obj\Debug\ARFI_POS.uProducts.resources
+F:\Software Development\HWA DEV\ARFI-POS\ARFI-POS\obj\Debug\ARFI_POS.frmSales.resources
+F:\Software Development\HWA DEV\ARFI-POS\ARFI-POS\obj\Debug\ARFI_POS.uUsers.resources
+F:\Software Development\HWA DEV\ARFI-POS v2\ARFI-POS\obj\Debug\ARFI-POS.csproj.AssemblyReference.cache
+F:\Software Development\HWA DEV\ARFI-POS v2\ARFI-POS\obj\Debug\ARFI_POS.frmCustomer.resources
+F:\Software Development\HWA DEV\ARFI-POS v2\ARFI-POS\obj\Debug\ARFI_POS.frmDashboard.resources
+F:\Software Development\HWA DEV\ARFI-POS v2\ARFI-POS\obj\Debug\ARFI_POS.frmLogin.resources
+F:\Software Development\HWA DEV\ARFI-POS v2\ARFI-POS\obj\Debug\POS_VUL.frmReturnSale.resources
+F:\Software Development\HWA DEV\ARFI-POS v2\ARFI-POS\obj\Debug\ARFI_POS.frmSales.resources
+F:\Software Development\HWA DEV\ARFI-POS v2\ARFI-POS\obj\Debug\POS_VUL.frmSplash.resources
+F:\Software Development\HWA DEV\ARFI-POS v2\ARFI-POS\obj\Debug\ARFI_POS.frmSupplier.resources
+F:\Software Development\HWA DEV\ARFI-POS v2\ARFI-POS\obj\Debug\ARFI_POS.Properties.Resources.resources
+F:\Software Development\HWA DEV\ARFI-POS v2\ARFI-POS\obj\Debug\ARFI_POS.uCustomer.resources
+F:\Software Development\HWA DEV\ARFI-POS v2\ARFI-POS\obj\Debug\ARFI_POS.uLoan.resources
+F:\Software Development\HWA DEV\ARFI-POS v2\ARFI-POS\obj\Debug\ARFI_POS.uProducts.resources
+F:\Software Development\HWA DEV\ARFI-POS v2\ARFI-POS\obj\Debug\ARFI_POS.uReport.resources
+F:\Software Development\HWA DEV\ARFI-POS v2\ARFI-POS\obj\Debug\ARFI_POS.uSales.resources
+F:\Software Development\HWA DEV\ARFI-POS v2\ARFI-POS\obj\Debug\ARFI_POS.uUsers.resources
+F:\Software Development\HWA DEV\ARFI-POS v2\ARFI-POS\obj\Debug\ARFI-POS.csproj.GenerateResource.cache
+F:\Software Development\HWA DEV\ARFI-POS v2\ARFI-POS\obj\Debug\ARFI-POS.csproj.CoreCompileInputs.cache
+F:\Software Development\HWA DEV\ARFI-POS v2\ARFI-POS\obj\Debug\ARFI-POS.exe
+F:\Software Development\HWA DEV\ARFI-POS v2\ARFI-POS\obj\Debug\ARFI-POS.pdb
+F:\Software Development\HWA DEV\ARFI-POS v2\ARFI-POS\bin\Debug\ARFI-POS.exe.config
+F:\Software Development\HWA DEV\ARFI-POS v2\ARFI-POS\bin\Debug\ARFI-POS.exe
+F:\Software Development\HWA DEV\ARFI-POS v2\ARFI-POS\bin\Debug\ARFI-POS.pdb
